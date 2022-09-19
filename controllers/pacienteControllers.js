@@ -70,7 +70,7 @@ const actualizarPaciente = async (req,res) => {
 const eliminarPaciente = async (req,res) => {
     const {id} = req.params
     const paciente = await Paciente.findById(id)
-    // console.log(paciente)
+    
     if(!paciente){
         return res.status(404).json({msg: "No Encontrado"})
     }
